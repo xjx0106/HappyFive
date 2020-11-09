@@ -11,9 +11,65 @@
 import G6 from "@antv/g6"; // 导入G6图引擎
 export default {
   name: "HappyFive",
+  props: {
+    // // 所下的x坐标
+    // happyX: {
+    //   type: String,
+    //   default: ""
+    // },
+    // // 所下的y坐标
+    // happyY: {
+    //   type: String,
+    //   default: ""
+    // },
+    // // 黑子数据
+    // happyFiveBlackBall: {
+    //   type: Array,
+    //   default: () => {
+    //     return [];
+    //   }
+    // },
+    // // 白子数据
+    // happyFiveWhiteBall: {
+    //   type: Array,
+    //   default: () => {
+    //     return [];
+    //   }
+    // },
+    // // 缩放美化
+    // happyFiveScale: {
+    //   type: Number,
+    //   default: 15
+    // },
+    // // 默认用户
+    // happyFiveUser: {
+    //   type: String,
+    //   default: "black"
+    // },
+    // // 是否轮到自己（用于显示红绿点和是否持续请求）
+    // nowYourTurnHappyFive: {
+    //   type: Boolean,
+    //   default: false
+    // },
+    // // 是否开启持续请求
+    // constantHappyQuery: {
+    //   type: Boolean,
+    //   default: false
+    // },
+    // // 开始happy了吗？
+    // isStartHappy: {
+    //   type: Boolean,
+    //   default: false
+    // },
+    // // 是否显示
+    // isShowHappyFive: {
+    //   type: Boolean,
+    //   default: true
+    // }
+  },
   data() {
     return {
-      //happFive
+      // happFive
       happyX: "", // 所下的x坐标
       happyY: "", // 所下的y坐标
       happyFiveBlackBall: [], // 黑子数据
