@@ -6,7 +6,7 @@ var happyFiveBlackBall = []; //新建消息容器，存放消息集
 var server = http.createServer((req, res) => {
   // 接收请求参数
   var data = "";
-  req.on("data", (d) => {
+  req.on("data", d => {
     data += d;
   });
 
@@ -25,18 +25,19 @@ var server = http.createServer((req, res) => {
       happyFiveBlackBall = [];
       happyFiveWhiteBall = [];
     } else if (obj.type === "query") {
+      // 普通请求，无需修改数据
     }
 
     // 返回数组和错误信息（没有则为空）
     var result = {
       resu: { happyFiveBlackBall, happyFiveWhiteBall },
-      error: null,
+      error: null
     };
 
     // 写状态
     res.writeHead(200, {
       "Content-Type": "text/plain",
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "*"
     });
     res.write(JSON.stringify(result)); //将打包好的对象传到前端
     res.end();
